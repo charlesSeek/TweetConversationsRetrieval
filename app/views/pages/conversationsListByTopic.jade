@@ -1,0 +1,17 @@
+extends ../layout
+block content
+  .container#home
+    .row
+          each conversation in conversations
+            .col-md-4(style="padding:4px")
+              .thumbnial(style="border:1px solid #ddd")
+                a(href="/conversation/#{conversation.value.id}")
+                  img(src="#{conversation.value.user_image}",style="padding:9px")
+                .caption(style="padding:9px")
+                  h4 Description:
+                  p Originator: @#{conversation.value.screen_name} ID: #{conversation.value.id}
+                  p(style="height:80px") Content: #{conversation.value.text}
+                  p(style="align:center")
+                    a.btn.btn-info(href="/conversations/show/#{conversation.id}",role="button") Conversation Detail 
+                    &nbsp
+                    a.btn.btn-info(target="_blank" href="https://twitter.com/pattonoswalt/status/#{conversation.value.id}",role="button") Go Twitter

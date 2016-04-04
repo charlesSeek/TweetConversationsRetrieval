@@ -1,0 +1,20 @@
+{
+	"stream_timeout": "300000",
+	"server_timeout": "900000",
+	"replies_loops":"10",
+	"couchdb":{
+		"couchdb_url": "localhost",
+		"couchdb_port":"5984",
+		"couchdb_dbname":"tweets"
+	},
+	"rest_api":{
+		"rest_api_url":"localhost",
+		"rest_api_port":"8080"
+	},
+	"twitter_key":{
+		"consumer_key":"QV9lvUd6V1SC611PkdaKbsO2T",
+		"consumer_secret":"dIeJ5Kr5JBpmJgHBjLgqLGS2OuLBVns4DypyjL0J0mHXImJaRR",
+		"access_token_key":"2453872435-iBe1JwJOfF1x6UwU3n2U1HoLKLR2vXFvD8W0nNc",
+		"access_token_secret":"t4Gs8MTpeXh6mpt7ZsMWf94gqBTlqsQBzdXkZv1jCL2Ns"
+	}
+}

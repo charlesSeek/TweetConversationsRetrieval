@@ -1,0 +1,38 @@
+extends ../layout
+block content
+  .container#ConversationListPage
+    .row
+        table.table.table-hover.table-bordered
+          thead
+            tr
+              th ID
+              th TOPIC
+              th TWEET ORIGINATOR
+              th CONVERSATION CREATED
+              th STATUS
+              th DETAIL
+              th REPLIES
+              th DELETE
+          tbody
+            if conversations
+              each conversation in conversations
+                tr(class="conversation-id-#{conversation.id}")
+                  td #{conversation.id}
+                  td(id="#{conversation.id}-topic",data-topic='#{conversation.value.topic}') #{conversation.value.topic}
+                  td(id='#{conversation.id}'+'-screen_name',data-screen_name='#{conversation.value.screen_name}') @#{conversation.value.screen_name}
+                  td #{conversation.value.retrieved_at}
+                  td #{conversation.value.status}
+                  td
+                    a(target="_blank",href="/conversations/show/#{conversation.id}") Detail
+                  if conversation.value.status == 'completed'
+                    td
+                      button.btn.btn-primary.refresh(type="button",data-id="#{conversation.id}") Refresh
+                  else
+                    td
+                      button.btn.btn-primary.get(type="button",data-id="#{conversation.id}") Get Replies
+                  td
+                    button.btn.btn-danger.del(type="button",data-id="#{conversation.id}") Delete
+            else
+              if message
+                h3 #{message}
+    script(src='/js/conversation.js')

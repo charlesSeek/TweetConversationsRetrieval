@@ -1,0 +1,19 @@
+extends ../layout
+block content
+  .container#home
+    .row
+      if topics
+        each topic in topics
+          .col-md-4
+            .panel.panel-default
+              .panel-heading
+                h4(style="padding:9px") Topic: #{topic.key} 
+                  p Conversations: #{topic.value}
+              .panel-body
+                .thumbnial
+                  a(href="/conversations/list/#{topic.key}")
+                    img(src="/img/topics.png")
+                  .caption(style="padding-left:8px")
+                   a.btn.btn-primary(href="/conversations/list/#{topic.key}",role="button") All Conversation
+      else
+        h3 #{message}

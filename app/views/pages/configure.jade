@@ -1,0 +1,46 @@
+extends ../layout
+block content
+  .container#ConfigurePage
+    .row
+       table.table.table-hover.table-bordered
+          thead
+            tr
+              th Configure Parameter
+              th Parameter Value
+          tbody
+            tr
+              td Stream Request Timeout
+              td #{stream_timeout} ms
+            tr
+              td Server Request Timeout
+              td #{server_timeout} ms
+            tr
+              td Replies Search Loops
+              td #{replies_loops}
+            tr
+              td Couchdb Host
+              td #{couchdb.couchdb_url}
+            tr
+              td Couchdb Port
+              td #{couchdb.couchdb_port}
+            tr
+              td Couchdb Database
+              td #{couchdb.couchdb_dbname}
+             tr
+              td REST API Server
+              td #{rest_api.rest_api_url}
+             tr
+              td REST API Port
+              td #{rest_api.rest_api_port}
+            tr
+              td Twitter Consumer Key
+              td #{twitter_key.consumer_key}
+            tr
+              td Twitter Consumer Secret
+              td #{twitter_key.consumer_secret}
+            tr
+              td Twitter Access Token Key
+              td #{twitter_key.access_token_key}
+            tr
+              td Twitter Access Token Secret
+              td #{twitter_key.access_token_secret}

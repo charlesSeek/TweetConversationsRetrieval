@@ -1,0 +1,27 @@
+{
+  "name": "TweetConversationRetrieve",
+  "authors": [
+    "shucheng cui <cuishucheng@gmail.com>"
+  ],
+  "description": "tweet conversations retrieve app",
+  "main": "app.js",
+  "moduleType": [],
+  "keywords": [
+    "twitter",
+    "conversation",
+    "retrieve"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

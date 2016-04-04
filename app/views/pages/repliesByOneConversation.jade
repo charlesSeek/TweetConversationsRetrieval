@@ -1,0 +1,13 @@
+extends ../layout
+block content
+  .container#RepliesPage
+    .row
+      each reply in replies
+          .media(style="border:1px solid #ddd",,style="border-radius:4px")
+            .media-left
+                a(href="#")
+                    img.media-object(src="#{reply.value.user_image}",style="padding:9px")
+            .media-body
+                h4.media-heading @#{reply.value.screen_name}
+                p #{reply.value.text}
+                p -#{reply.value.created_at}
