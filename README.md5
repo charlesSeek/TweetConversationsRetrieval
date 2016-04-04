@@ -12,15 +12,9 @@ we use the node.js as the backend development framework and the node.js installa
 
 2.Application Installation
 2.1	clone source code from github repository: github.com/shuchengc/TweetConversationRetrieve
-2.2 create database "tweets" in couchdb, create couchdb views 
-2.3 install all the packages: $npm install 
-2.4 configure OS environment variables:
-	COUCHDB_URL: the IP address of couchdb server,default value is localhost
-	COUCHDB_PORT: the port of couchdb server,default value is 5984
-	COUCHDB_DBNAME: the name of database, default value is tweets
-	REST_API_URL: the IP address of rest api service,default value is localhost
-	REST_API_PORT: the port of rest api service,default value is 8080
-	TWITTER_KEY: the secret keys for twitter developer 
+2.2	install all the depedencies packages: $npm install
+2.3 create database "tweets" in couchdb, create couchdb views 
+2.4 install all the packages: $npm install 
 2.5 start the application: $grunt
 
 3.Node.js package dependencies
@@ -64,6 +58,17 @@ All the package dependencies are list in the package.json file and you can use "
 4.5 routes: application route configuration files
 	- routeAPI.js : rest api service route file
 	- routes.js: web route file
+4.6 config
+	- software configuration file
+	stream_timeout: the parameter of twitter stream request timeout
+	server_time: the parameter of express server request timeout
+	replies_loops: the times of call twitter search api 
+	couchdb_url: the IP address of couchdb server,default value is localhost
+	couchdb_port: the port of couchdb server,default value is 5984
+	couchdb_dbname: the name of database, default value is tweets
+	rest_api_url: the IP address of rest api service,default value is localhost
+	rest_api_port: the port of rest api service,default value is 8080
+	twitter_key: the consumer and secret keys for twitter developer 
 
 5.REST HTTP APIs Reference
 5.1 Couchdb REST APIs
